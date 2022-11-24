@@ -6,10 +6,10 @@
 <div class="col-md-3">
   <h4 class="text-white">Menu</h4>
   <ul>
-    <li><a href="#">Privacy Policy</a></li>
-    <li><a href="#">Terms & Conditions</a></li>
-    <li><a href="#">Disclaimer</a></li>
-    <li><a href="#">Contact Us</a></li>
+    <li style="color:#ffffff"><a href="#">Privacy Policy</a></li>
+    <li style="color:#ffffff"><a href="#">Terms & Conditions</a></li>
+    <li style="color:#ffffff"><a href="#">Disclaimer</a></li>
+    <li style="color:#ffffff"><a href="#">Contact Us</a></li>
   </ul>
 </div>
 
