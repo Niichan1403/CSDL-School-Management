@@ -8,3 +8,13 @@ include('inc/top.php');
         </div>
     </div>
 </div>
+
+<div class="container-fluid">
+    <div class="row bg-dark mt-2 p-3">
+        <?php include('inc/footer.php'); ?>
+    </div>
+</div>
+
+</body>
+
+</html>
