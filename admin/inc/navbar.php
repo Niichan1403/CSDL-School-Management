@@ -46,7 +46,7 @@
           <i class="fa fa-cog"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="admin/login.php">Admin Loggin</a>
+          <a class="dropdown-item" href="#">Admin Loggin</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Student Loggin</a>
         </div>

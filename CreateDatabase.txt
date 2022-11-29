@@ -1,0 +1,126 @@
+CREATE TABLE `school`.`attendance` (
+    `attID` INT(11) NOT NULL AUTO_INCREMENT,
+    `studentID` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `attendance` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `date` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    PRIMARY KEY (`attID`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`category` (
+    `cat_id` INT(11) NOT NULL AUTO_INCREMENT,
+    `cat_name` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`cat_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`competitive` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `examName` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`courses` (
+    `course_id` INT(11) NOT NULL AUTO_INCREMENT,
+    `course_name` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `course_duration` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `course_fee` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `course_start` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `class` INT(10) NOT NULL ,
+    PRIMARY KEY (`course_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`exam` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `batchName` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `date` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `subject` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `class` INT(10) NOT NULL ,
+    `totalMark` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`expenses` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `particular` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `amt` INT(10) NOT NULL ,
+    `date` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`fee` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `studentID` INT(11) NOT NULL ,
+    `classID` INT(11) NOT NULL ,
+    `batchID` INT(11) NOT NULL ,
+    `fees` INT(11) NOT NULL ,
+    `rNo` INT(11) NOT NULL ,
+    `date` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`gallery` (
+    `gallery_id` INT(11) NOT NULL AUTO_INCREMENT,
+    `gallery_title` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `gallery_image` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`gallery_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`msg` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `studentID` INT(10) NOT NULL ,
+    `message` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `date` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`msgtoclasses` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `studentID` INT(10) NOT NULL ,
+    `date` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    `msgToClass` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`register` (
+    `regID` INT(11) NOT NULL AUTO_INCREMENT,
+    `regName` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `regEmail` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `regMobile` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `regAddress` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `regQua` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `regCourse` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `date` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    PRIMARY KEY (`regID`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`result` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `studentID` INT(10) NOT NULL ,
+    `batchID` INT(10) NOT NULL ,
+    `classID` INT(10) NOT NULL ,
+    `date` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `subject` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `totalMark` INT(10) NOT NULL ,
+    `obtainMark` INT(10) NOT NULL ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`student` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `address` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `class` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `batch` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `medium` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `gender` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `mobile` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `email` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `school` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `fee` INT(10) NOT NULL ,
+    `password` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `subject` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `cexam` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `dob` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `image` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `date` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`subject` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `subjectName` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `school`.`user` (
+    `user_id` INT(11) NOT NULL AUTO_INCREMENT,
+    `user_name` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `user_pass` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `user_role` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    `user_image` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+    PRIMARY KEY (`user_id`)) ENGINE = InnoDB;
