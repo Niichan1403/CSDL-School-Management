@@ -10,51 +10,26 @@
         <a class="nav-link text-white" href="index.php"><i class="fa fa-home"></i> Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="about-us.php"><i class="fa fa-laptop"></i> About Us</a>
+        <a class="nav-link text-white" href="addGallery.php"><i class="fa fa-camera"></i> Add Gallery</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="student.php"><i class="fa fa-user"></i> Student</a>
+        <a class="nav-link text-white" href="addStudent.php"><i class="fa fa-user"></i> Add Student</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-        <i class="fa fa-graduation-cap"></i> Other Stuff
+        <i class="fa fa-book"></i> Create Masters
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="download.php">Download</a>
-          <a class="dropdown-item" href="result.php">Result</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="edu-facilities.php">Educational Facilities</a>
-          <a class="dropdown-item" href="student-corner.php">Student's Corner</a>
+          <a class="dropdown-item" href="#">Create Category</a>
+          <a class="dropdown-item" href="addCourse.php">Create Course</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="gallery.php"><i class="fa fa-photo"></i> Gallery</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="contact-us.php"><i class="fa fa-envelope"></i> Contact Us</a>
-      </li>
     </ul>
+
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="#"><i class="fa fa-facebook"></i></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link text-white" href="#"><i class="fa fa-youtube"></i></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          <i class="fa fa-cog"></i>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="#">Admin Loggin</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Student Loggin</a>
-        </div>
+        <a class="nav-link text-white" href="logout.php"><i class="fa fa-home"></i> Log Out</a>
       </li>
     </ul>
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
   </div>
 </nav>
