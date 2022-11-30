@@ -92,6 +92,14 @@ CREATE TABLE `school`.`result` (
     `obtainMark` INT(10) NOT NULL ,
     PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
+CREATE TABLE `school`.`review` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `review_name` varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `review_image` varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `review` varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `review_date` varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  PRIMARY KEY (`review_id`)) ENGINE=InnoDB;
+
 CREATE TABLE `school`.`student` (
     `id` INT(10) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
