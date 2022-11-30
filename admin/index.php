@@ -9,6 +9,7 @@ if (!isset($_SESSION['user_name'])) {
 }
 
 require_once('inc/top.php');
+require_once('inc/db.php');
 ?>
 
 <div class="container-fluid">
