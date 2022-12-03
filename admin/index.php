@@ -41,47 +41,21 @@ require_once('inc/db.php');
                         <div class="card-body">
                             <table class="table table-bordered table-condensed">
                                 <tbody>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 1</th>
-                                        <th>51</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 2</th>
-                                        <th>52</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 3</th>
-                                        <th>53</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 4</th>
-                                        <th>54</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 5</th>
-                                        <th>55</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 6</th>
-                                        <th>55</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 7</th>
-                                        <th>55</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 8</th>
-                                        <th>55</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 9</th>
-                                        <th>55</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-dark text-white">Class 10</th>
-                                        <th>55</th>
-                                    </tr>
 
+                                    <?php 
+                                        for($i = 1;$i <=  10; $i++) {
+                                            $student = "SELECT * FROM student WHERE class = '$i'";
+                                            $student_run = mysqli_query($con , $student);
+                                            $row_student = mysqli_num_rows($student_run);
+                                        
+                                    ?>
+                                    <tr>
+                                        <th class="bg-dark text-white">Class <?php echo   $i;?></th>
+                                        <th><?php echo   $row_student;?></th>
+                                    </tr>
+                                    <?php 
+                                        }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -93,17 +67,37 @@ require_once('inc/db.php');
                         <div class="card-body">
                             <table class="table table-bordered table-condensed">
                                 <tbody>
+                                    <?php
+                                        $studentTotalFee = "SELECT * FROM student";
+                                        $runstudentTotalFee = mysqli_query($con,$studentTotalFee);
+                                        $studentTotalFee = 0;
+                                        $Totalfeesa = 0;
+
+                                        while($rowstudentTotalFee = mysqli_fetch_array($runstudentTotalFee)) {
+                                            $studnetTotalFee = $rowstudentTotalFee['fee'];
+                                            $Totalfeesa += $studnetTotalFee;
+                                        }
+
+                                        $feea = "SELECT * FROM fee";
+                                        $fee_run= mysqli_query($con,$feea);
+                                        $fees=0;
+                                        $feesa=0;
+                                        while($row_fee = mysqli_fetch_array($fee_run)) {
+                                            $fees= $row_fee['fees'];
+                                            $feesa += $fees;
+                                        }
+                                    ?>
                                     <tr>
                                         <th class="bg-dark text-white">Total Fee</th>
-                                        <th>5000$</th>
+                                        <th><?php echo  $Totalfeesa;?></th>
                                     </tr>
                                     <tr>
                                         <th class="bg-dark text-white">Collected Fee</th>
-                                        <th>4000$</th>
+                                        <th><?php echo  $feesa;?></th>
                                     </tr>
                                     <tr>
                                         <th class="bg-danger text-white">Remaining Fee</th>
-                                        <th>1000$</th>
+                                        <th><?php echo  $Totalfeesa - $feesa;?></th>
                                     </tr>
 
                                 </tbody>
@@ -116,17 +110,29 @@ require_once('inc/db.php');
                         <div class="card-body">
                             <table class="table table-bordered table-condensed">
                                 <tbody>
+                                    <?php 
+                                        $expenses = "SELECT * FROM expenses";
+                                        $runexpenses = mysqli_query($con,$expenses);
+                                        $expAmt = 0;
+                                        $Totalexp = 0;
+
+                                        while($rowexpenses = mysqli_fetch_array($runexpenses)) {
+                                            $expAmt = $rowexpenses['amt'];
+                                            $Totalexp += $expAmt;
+                                        }
+
+                                    ?>
                                     <tr>
                                         <th class="bg-dark text-white">Collected Fee</th>
-                                        <th>4000$</th>
+                                        <th><?php echo  $feesa;?></th>
                                     </tr>
                                     <tr>
                                         <th class="bg-dark text-white">Expenses</th>
-                                        <th>2000$</th>
+                                        <th><?php echo  $Totalexp;?></th>
                                     </tr>
                                     <tr>
                                         <th class="bg-danger text-white">Remaining Balance</th>
-                                        <th>2000$</th>
+                                        <th><?php echo  $feesa-$Totalexp;?></th>
                                     </tr>
 
                                 </tbody>
@@ -150,19 +156,27 @@ require_once('inc/db.php');
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>1</th>
-                                        <th>30/11/2022</th>
-                                        <th>1000$</th>
-                                        <th>Bill</th>
-                                    </tr>
-                                    <tr>
-                                        <th>1</th>
-                                        <th>30/11/2022</th>
-                                        <th>1000$</th>
-                                        <th>Bill</th>
-                                    </tr>
+                                    <?php
+                                        $expenses = "SELECT * FROM expenses ORDER BY id DESC LIMIT 10";
+                                        $runexpenses = mysqli_query($con,$expenses);
+                                        $ia =0;
 
+                                        while($rowexpenses = mysqli_fetch_array($runexpenses)) {
+                                            $expAmt = $rowexpenses['amt'];
+                                            $particular = $rowexpenses['particular'];
+                                            $date = $rowexpenses['date'];
+
+                                            $ia += $ia + 1;
+                                        
+                                    ?>
+                                    <tr>
+                                        <th><?php echo  $ia;?></th>
+                                        <th><?php echo  $date;?></th>
+                                        <th><?php echo  $expAmt;?></th>
+                                        <th><?php echo  $particular;?></th>
+                                    </tr>
+                                    
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
