@@ -32,17 +32,10 @@ require_once('inc/db.php');
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center text-white bg-primary">Add Batches</h3><hr>
+                    <h3 class="text-center text-white bg-primary">Add Exam</h3><hr>
                 
 
                     <form action="" method="post" enctype="multipart/form-data">
-                        <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Course Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Course Name" name="courseName"
-                                />
-                            </div> 
-                        </div>  
 
                         <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-danger">For Class</label>
@@ -69,30 +62,37 @@ require_once('inc/db.php');
          
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Batch Duration</label>
+                                <label class="col-sm-2 col-form-label text-danger">For Batch</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Duration" name="duration" required/>
+                                <input type="text" class="form-control" placeholder="Enter Batch Name" name="batchName" required/>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Batch Fee</label>
+                                <label class="col-sm-2 col-form-label text-danger">Subject</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Fee" name="fee"
+                                <input type="subject" class="form-control" placeholder="Enter Subject" name="fee"
                                 required/>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Batch Starts From</label>
+                                <label class="col-sm-2 col-form-label text-danger">Total Mark</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Enter Total Mark" name="totalMark" required/>
+                            </div> 
+                        </div>  
+                        
+                        <div class="form-group row">
+                                <label class="col-sm-2 col-form-label text-danger">Exam Date</label>
                             <div class="col-sm-10">
                                 <input type="date" class="form-control" name="date" required/>
                             </div> 
-                        </div>  
+                        </div> 
 
                         <div class="form-group row">    
                             <div class="offset-sm-2 col-sm-10">
-                                <button class="btn btn-outline-primary btn-block" name="submit" type="submit">Add Batch</button> 
+                                <button class="btn btn-outline-primary btn-block" name="submit" type="submit">Add Exam</button> 
                             </div> 
                         </div> 
                     </form>
@@ -113,21 +113,21 @@ require_once('inc/db.php');
 
 <?php 
     if(isset($_POST['submit'])) {
-        $courseName=$_POST['courseName'];
+        $batchName=$_POST['batchName'];
         $class=$_POST['class'];
-        $duration=$_POST['duration'];
-        $fee=$_POST['fee'];
+        $subject=$_POST['subject'];
+        $totalMark=$_POST['totalMark'];
         $date=$_POST['date'];
 
 
-        $insert_course = "INSERT INTO courses
-         (course_name, course_duration, course_fee, course_start, class) value ('$courseName', '$duration', '$fee', '$date', '$class')";
+        $insert_exam = "INSERT INTO exam
+         (batchName, date, subject, totalMark, class) value ('$batchName', '$date', '$subject', '$totalMark', '$class')";
         
-        $insert_pro = mysqli_query($con,$insert_course);
+        $insert_pro = mysqli_query($con,$insert_exam);
 
         if($insert_pro) {
-            echo "<script>alert('Welcome , You have Added a new Batch !')</script>";
-            echo "<script>window.open('course.php','_self')</script>";
+            echo "<script>alert('Welcome , You have Added a new Exam !')</script>";
+            echo "<script>window.open('exam.php','_self')</script>";
         }
     }
 ?>
