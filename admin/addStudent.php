@@ -172,7 +172,7 @@ require_once('inc/db.php');
                         </div>   
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Compititive Exam</label>
+                                <label class="col-sm-2 col-form-label text-danger">Competitive Exam</label>
                             <div class="col-sm-10">
                                 <?php
                                     $subject="SELECT * FROM competitive";

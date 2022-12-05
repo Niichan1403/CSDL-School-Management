@@ -74,22 +74,22 @@ if(isset($_GET['del'])) {
                                     $i++;
                                 
                             ?>
-                            <tr> 
-                            <td><?php echo  $i;?></td>
-                            <td><?php echo  ucfirst($gallery_title);?></td>
-                            <td>
-                                <img class="img-fluid" src="../images/gallery/<?php echo $gallery_image;?>" 
-                                width ="100px;" />
-                            </td>
-                            <td>
-                                <a class="btn btn-warning" href="editGallery.php?id=<?php echo $gallery_id;?>"><i 
-                                class="fa fa-pencil-square-o"></i></a>
-                            </td>
-                            <td>
-                                <a class="btn btn-danger" href="gallery.php?del=<?php echo $gallery_id;?>"><i 
-                                class="fa fa-trash-o"></i></a>
-                            </td>
-                                </tr>
+                            <tr>
+                                <td><?php echo  $i;?></td>
+                                <td><?php echo  ucfirst($gallery_title);?></td>
+                                <td>
+                                    <img class="img-fluid" src="../images/gallery/<?php echo $gallery_image;?>" 
+                                    width ="100px;" />
+                                </td>
+                                <td>
+                                    <a class="btn btn-warning" href="editGallery.php?id=<?php echo $gallery_id;?>"><i 
+                                    class="fa fa-pencil-square-o"></i></a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger" href="gallery.php?del=<?php echo $gallery_id;?>"><i 
+                                    class="fa fa-trash-o"></i></a>
+                                </td>
+                            </tr>
                             <?php } ?>
                         </tbody>
                     </table>
