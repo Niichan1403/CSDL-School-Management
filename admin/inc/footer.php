@@ -1,6 +1,6 @@
 <div class="col-md-3 text-white">
-  <h2 class="text-center">Apex Academy</h2>
-  <p class="text-center">© 2021 <a href="#">Apex Academy</a>, All rights reserved</p>
+  <h2 class="text-center">UET</h2>
+  <p class="text-center">© 2021 <a href="#">UET</a>, All rights reserved</p>
 </div>
 
 <div class="col-md-3">
@@ -23,9 +23,8 @@
 <div class="col-md-3 text-white">
   <h4>Address</h4>
   <address>
-    Apex Academy<br>
-    Near Honda Showroom<br>
-    Dist: Nanded<br>
+    UET<br>
+    144 Xuan Thuy, Cau Giay, Hanoi<br>
     Mobile: 0123456789<br>
   </address>
 </div>

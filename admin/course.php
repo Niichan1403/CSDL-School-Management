@@ -44,20 +44,20 @@ if(isset($_GET['del'])) {
             
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center text-white bg-primary">View Batches</h2>
+                    <h2 class="text-center text-white bg-primary">Hiển thị khóa học</h2>
                     <div align="right">
-                        <a href="addCourse.php" class="btn btn-outline-primary">Add Batches</a> <hr>
+                        <a href="addCourse.php" class="btn btn-outline-primary">Thêm khóa học</a> <hr>
                     </div>
                     <table class="table table-border" id = "table2excel">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Sr No</th>
-                                <th>Course Name</th>
-                                <th>For Class</th>
-                                <th>Duration</th>
-                                <th>Course Fee</th>
-                                <th>No of Student</th>
-                                <th>Batch Starts</th>
+                                <th>STT</th>
+                                <th>Tên khóa học</th>
+                                <th>Lớp</th>
+                                <th>Thời gian</th>
+                                <th>Học phí</th>
+                                <th>Số lượng học sinh</th>
+                                <th>Bắt đầu từ</th>
                                 <th>
                                     <i class="fa fa-eye"></i>
                                 </th>
@@ -111,7 +111,7 @@ if(isset($_GET['del'])) {
                         </tbody>
                     </table>
                 </div>
-                <button class="btn btn-danger offset-md-4" id ="btn" type="button">Export to Excel</button>
+                <button class="btn btn-danger offset-md-4" id ="btn" type="button">Xuất ra Excel</button>
             </div>
             
         </div>

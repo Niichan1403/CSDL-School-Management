@@ -51,14 +51,14 @@ if(isset($_POST['checkboxes'])) {
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center text-white bg-primary">Student List</h2>
+                    <h2 class="text-center text-white bg-primary">Danh sách học sinh</h2>
                     <div class="row">
                         <div class="col-xs-4">
                             <div class="form-group">
                                 <select class="form-control" name="bulk-options">
                                     <option value="">Select</option>
-                                    <option value="present">Present</option>
-                                    <option value="absent">Absent</option>
+                                    <option value="present">Có mặt</option>
+                                    <option value="absent">Vắng mặt</option>
                                 </select>
                             </div>
                         </div>
@@ -71,13 +71,13 @@ if(isset($_POST['checkboxes'])) {
                         <thead class="thead-dark">
                             <tr> 
                                 <th><input type="checkbox" id="selectallboxes"/></th>
-                                <th>Sr No</th> 
-                                <th>Student Name</th> 
-                                <th>School</th> 
-                                <th>Gender</th> 
-                                <th>Class</th> 
-                                <th>Batch</th> 
-                                <th>Image</th> 
+                                <th>STT</th> 
+                                <th>Tên</th> 
+                                <th>Trường</th> 
+                                <th>Giới tính</th> 
+                                <th>Lớp</th> 
+                                <th>Khóa học</th> 
+                                <th>Ảnh</th> 
                             </tr> 
                         </thead>
                         <tbody>
@@ -121,7 +121,7 @@ if(isset($_POST['checkboxes'])) {
                         </tbody>
                     </table>
                 </div>
-                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Export To Excel</button>
+                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Xuất ra Excel</button>
 
             </div>
         </div>

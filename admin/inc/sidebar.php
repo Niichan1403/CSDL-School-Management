@@ -51,67 +51,67 @@
     </a>
 
     <a href="gallery.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-camera"></i> Gallery 
+        <i class="fa fa-camera"></i> Thư viện ảnh 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_gallery; ?></span>
         </button>
     </a>
     <a href="student.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-user"></i> Students 
+        <i class="fa fa-user"></i> Học sinh 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_student; ?></span>
         </button>
     </a>
     <a href="review.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-star"></i> Reviews 
+        <i class="fa fa-star"></i> Nhận xét
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_review; ?></span>
         </button>
     </a>
     <a href="course.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-life-ring"></i> Batches 
+        <i class="fa fa-life-ring"></i> Khóa học 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_courses; ?></span>
         </button>
     </a>
     <a href="register.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-lightbulb-o"></i> Registration 
+        <i class="fa fa-lightbulb-o"></i> Đăng ký 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_register; ?></span>
         </button>
     </a>
     <a href="fee.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-money"></i> Fee 
+        <i class="fa fa-money"></i> Học phí 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_fee; ?></span>
         </button>
     </a>
     <a href="category.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-sort"></i> Category 
+        <i class="fa fa-sort"></i> Danh mục 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_category; ?></span>
         </button>
     </a>
     <a href="expenses.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-money"></i> Expenses 
+        <i class="fa fa-money"></i> Chi phí 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_expenses; ?></span>
         </button>
     </a>
     <a href="exam.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-question"></i> Exam 
+        <i class="fa fa-question"></i> Kỳ thi 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_exam; ?></span>
         </button>
     </a>
     <a href="msg.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-envelope"></i> Messages 
+        <i class="fa fa-envelope"></i> Thông báo 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_msg; ?></span>
         </button>
     </a>
     <a href="msgToClasses.php" class="list-group-item list-group-item-action">
-        <i class="fa fa-window-close-o"></i> Complaints 
+        <i class="fa fa-window-close-o"></i> Phản hồi 
         <button class="btn btn-primary pull-right btn-sm">
             <span class="badge badge-light text-danger"><?php echo $row_msgtoclasses; ?></span>
         </button>

@@ -52,14 +52,14 @@ if (isset($_POST['submit'])){
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <form method="post" action="">
-                    <h2 class="text-danger">Please Sign In (Admin)</h2>
+                    <h2 class="text-danger">Đăng nhập (Admin)</h2>
                     <label for="" class="text-danger">Username</label>
                     <input type="text" class="form-control" name="username" placeholder="USERNAME" required><br>
 
                     <label for="" class="text-danger">Password</label>
                     <input type="password" class="form-control" name="password" placeholder="PASSWORD" required><br>
 
-                    <button class="btn btn-danger btn-block"  type="submit" name="submit">Sign In</button>
+                    <button class="btn btn-danger btn-block"  type="submit" name="submit">Đăng nhập</button>
                 </form>
             </div>
             <div class="col-md-4"></div>

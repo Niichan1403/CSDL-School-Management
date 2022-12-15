@@ -44,18 +44,18 @@ if(isset($_GET['del'])) {
             
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center text-white bg-primary">View Exam</h2>
+                    <h2 class="text-center text-white bg-primary">Hiển thị kỳ thi</h2>
                     <div align="right">
-                        <a href="addExam.php" class="btn btn-outline-primary">Add Exam</a> <hr>
+                        <a href="addExam.php" class="btn btn-outline-primary">Thêm kỳ thi</a> <hr>
                     </div>
                     <table class="table table-border" id = "table2excel">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Sr No</th>
-                                <th>Batch Name</th>
-                                <th>Date</th>
-                                <th>Subject</th>
-                                <th>Total Marks</th>
+                                <th>STT</th>
+                                <th>Tên khóa học</th>
+                                <th>Ngày</th>
+                                <th>Môn học</th>
+                                <th>Điểm tổng</th>
                                 <th>
                                     <i class="fa fa-eye"></i>
                                 </th>
@@ -80,18 +80,10 @@ if(isset($_GET['del'])) {
                                     $totalMarks = $row_exam['totalMark'];
                                     $class = $row_exam['class'];
                                     $i++;
-
-                                    $class= "SELECT * FROM courses WHERE course_id = '$batchName'";
-                                    $run_class= mysqli_query($con, $class);
-                                    $row_class= mysqli_fetch_array($run_class);
-                                    
-                                    $course_name = $row_class['course_name'];
-                                    $class=$row_class['class'];
-
                             ?>
                             <tr>
                                 <td><?php echo $i;?></td>
-                                <td><?php echo ucfirst($course_name);?></td>
+                                <td><?php echo ucfirst($batchName);?></td>
                                 <td><?php echo $date;?></td>
                                 <td><?php echo $subject;?></td>
                                 <td><?php echo $totalMarks;?></td>
@@ -110,7 +102,7 @@ if(isset($_GET['del'])) {
                         </tbody>
                     </table>
                 </div>
-                <button class="btn btn-danger offset-md-4" id ="btn" type="button">Export to Excel</button>
+                <button class="btn btn-danger offset-md-4" id ="btn" type="button">Xuất ra Excel</button>
             </div>
             
         </div>

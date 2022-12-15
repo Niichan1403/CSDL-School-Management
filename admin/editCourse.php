@@ -51,12 +51,12 @@ if($_GET['id']) {
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center text-white bg-primary">Edit Batch</h3><hr>
+                    <h3 class="text-center text-white bg-primary">Sửa khóa học</h3><hr>
                 
 
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Course Name</label>
+                                <label class="col-sm-2 col-form-label text-danger">Tên khóa học</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" value="<?php echo $course_name;?>" name="courseName"/>
                             </div> 
@@ -64,26 +64,26 @@ if($_GET['id']) {
 
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">For Class</label>
+                                <label class="col-sm-2 col-form-label text-danger">Lớp</label>
                             <div class="col-sm-10">
                                 <select class="form-control" name="class" required>
-                                    <option value="1" <?php if($class == '1'){echo "selected";} ?> >Class 1</option>
-                                    <option value="2" <?php if($class == '2'){echo "selected";} ?> >Class 2</option>
-                                    <option value="3" <?php if($class == '3'){echo "selected";} ?>>Class 3</option>
-                                    <option value="4" <?php if($class == '4'){echo "selected";} ?>>Class 4</option>
-                                    <option value="5" <?php if($class == '5'){echo "selected";} ?>>Class 5</option>
-                                    <option value="6" <?php if($class == '6'){echo "selected";} ?>>Class 6</option>
-                                    <option value="7" <?php if($class == '7'){echo "selected";} ?>>Class 7</option>
-                                    <option value="8" <?php if($class == '8'){echo "selected";} ?>>Class 8</option>
-                                    <option value="9" <?php if($class == '9'){echo "selected";} ?>>Class 9</option>
-                                    <option value="10" <?php if($class == '10'){echo "selected";} ?>>Class 10</option>
+                                    <option value="1" <?php if($class == '1'){echo "selected";} ?> >Lớp 1</option>
+                                    <option value="2" <?php if($class == '2'){echo "selected";} ?> >Lớp 2</option>
+                                    <option value="3" <?php if($class == '3'){echo "selected";} ?>>Lớp 3</option>
+                                    <option value="4" <?php if($class == '4'){echo "selected";} ?>>Lớp 4</option>
+                                    <option value="5" <?php if($class == '5'){echo "selected";} ?>>Lớp 5</option>
+                                    <option value="6" <?php if($class == '6'){echo "selected";} ?>>Lớp 6</option>
+                                    <option value="7" <?php if($class == '7'){echo "selected";} ?>>Lớp 7</option>
+                                    <option value="8" <?php if($class == '8'){echo "selected";} ?>>Lớp 8</option>
+                                    <option value="9" <?php if($class == '9'){echo "selected";} ?>>Lớp 9</option>
+                                    <option value="10" <?php if($class == '10'){echo "selected";} ?>>Lớp 10</option>
                                 </select>
                             </div> 
                         </div>  
 
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Fee</label>
+                                <label class="col-sm-2 col-form-label text-danger">Học phí</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" value="<?php echo $course_fee;?>" name="fee"
                                 required/>
@@ -93,14 +93,14 @@ if($_GET['id']) {
 
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Date Start</label>
+                                <label class="col-sm-2 col-form-label text-danger">Bắt đầu từ</label>
                             <div class="col-sm-10">
                                 <input type="date" class="form-control" name="date" value="<?php echo $date;?>"/>
                             </div> 
                         </div>  
                         
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger"> Duration </label>
+                                <label class="col-sm-2 col-form-label text-danger"> Thời gian </label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" value = "<?php echo $duration;?>"  name="duration" required/>
                             </div> 
@@ -109,8 +109,7 @@ if($_GET['id']) {
                         <div class="form-group row">
                                 
                             <div class="offset-sm-2 col-sm-10">
-                                <button class="btn btn-outline-primary btn-block" name="update" type="submit">Edit
-                                Batch</button> 
+                                <button class="btn btn-outline-primary btn-block" name="update" type="submit">Sửa khóa học</button> 
                             </div> 
                         </div> 
                     </form>
@@ -132,7 +131,7 @@ if($_GET['id']) {
 <?php 
     if(isset($_POST['update'])) {
         if(isset($_GET['id'])) {
-            $id= $_GET['id'];
+            $id = $_GET['id'];
         }
 
         $courseName=$_POST['courseName'];
@@ -144,17 +143,17 @@ if($_GET['id']) {
 
         $update = "UPDATE courses set
         course_name = '$courseName',
+        course_duration = '$duration',
         course_fee = '$fee',
         course_start = '$date',
-        course_duration = '$duration',
-        class = '$class''
+        class = '$class'
         where course_id = '$id';
         ";
         
         $insert_pro = mysqli_query($con,$update);
 
         if($insert_pro) {
-            echo "<script>alert('Welcome , You have Updated Course !')</script>";
+            echo "<script>alert('Welcome , You have Edit Course !')</script>";
             echo "<script>window.open('course.php','_self')</script>";
         } else {
             echo "<script>alert('Nope !')</script>";

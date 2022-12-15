@@ -32,55 +32,54 @@ require_once('inc/db.php');
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center text-white bg-primary">Add Student</h3><hr>
+                    <h3 class="text-center text-white bg-primary">Thêm học sinh</h3><hr>
                 
 
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Student Name</label>
+                                <label class="col-sm-2 col-form-label text-danger">Tên học sinh</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Student Name" name="studentName"
+                                <input type="text" class="form-control" placeholder="Nhập tên" name="studentName"
                                 />
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Address</label>
+                                <label class="col-sm-2 col-form-label text-danger">Địa chỉ</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Address" name="address"
+                                <input type="text" class="form-control" placeholder="Thêm địa chỉ" name="address"
                                 />
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">For Class</label>
+                                <label class="col-sm-2 col-form-label text-danger">Lớp</label>
                             <div class="col-sm-10">
                                 <select class="form-control" name="class" required>
-                                    <option value="1">Class 1</option>
-                                    <option value="2">Class 2</option>
-                                    <option value="3">Class 3</option>
-                                    <option value="4">Class 4</option>
-                                    <option value="5">Class 5</option>
-                                    <option value="6">Class 6</option>
-                                    <option value="7">Class 7</option>
-                                    <option value="8">Class 8</option>
-                                    <option value="9">Class 9</option>
-                                    <option value="10">Class 10</option>
+                                    <option value="1">Lớp 1</option>
+                                    <option value="2">Lớp 2</option>
+                                    <option value="3">Lớp 3</option>
+                                    <option value="4">Lớp 4</option>
+                                    <option value="5">Lớp 5</option>
+                                    <option value="6">Lớp 6</option>
+                                    <option value="7">Lớp 7</option>
+                                    <option value="8">Lớp 8</option>
+                                    <option value="9">Lớp 9</option>
+                                    <option value="10">Lớp 10</option>
                                 </select>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Batch</label>
+                                <label class="col-sm-2 col-form-label text-danger">Khóa học</label>
                             <div class="col-sm-10">
-                                <select class="form-control" name="batch" required>
+                                <select class="form-control" name="batch" onChange="myNewFunction(this);" required>
                                     <?php
                                         $getBatch ="SELECT * FROM courses";
                                         $run_batch = mysqli_query($con,$getBatch);
                                         while($rowBatch=mysqli_fetch_array($run_batch)) {
                                             $id=$rowBatch['course_id'];
-                                            $course_name=$rowBatch['course_name'];
-                                        
+                                            $course_name=$rowBatch['course_name'];                                        
                                     ?>
                                     <option value="<?php echo $id;?>"><?php echo $course_name;?></option>
 
@@ -90,7 +89,7 @@ require_once('inc/db.php');
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Medium</label>
+                                <label class="col-sm-2 col-form-label text-danger">Bằng cấp</label>
                             <div class="col-sm-10">
                                 <select class="form-control" name="medium" required>
                                     <option value="Marathi">Marathi</option>
@@ -101,19 +100,19 @@ require_once('inc/db.php');
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Gender</label>
+                                <label class="col-sm-2 col-form-label text-danger">Giới tính</label>
                             <div class="col-sm-10">
                             <select class="form-control" name="gender" required>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
+                                    <option value="male">Nam</option>
+                                    <option value="female">Nữ</option>
                                 </select>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Mobile</label>
+                                <label class="col-sm-2 col-form-label text-danger">Điện thoai</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Mobile Number" name="mobile"
+                                <input type="text" class="form-control" placeholder="Thêm số điện thoại" name="mobile"
                                 required/>
                             </div> 
                         </div>  
@@ -121,37 +120,37 @@ require_once('inc/db.php');
                         <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-danger">Email</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Email" name="email"
+                                <input type="text" class="form-control" placeholder="Nhập Email" name="email"
                                 required/>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">School</label>
+                                <label class="col-sm-2 col-form-label text-danger">Trường</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter School Name" name="school"
+                                <input type="text" class="form-control" placeholder="Nhập trường" name="school"
                                 required/>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Fees</label>
+                                <label class="col-sm-2 col-form-label text-danger">Học phí</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Total Fees Amount" name="fee"
+                                <input type="text" class="form-control" placeholder="Nhập tổng học phí" name="fee"
                                 required/>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Password</label>
+                                <label class="col-sm-2 col-form-label text-danger">Mật khẩu</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Password" name="password"
+                                <input type="text" class="form-control" placeholder="Nhập mật khẩu" name="password"
                                 required/>
                             </div> 
                         </div> 
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Subject</label>
+                                <label class="col-sm-2 col-form-label text-danger">Môn học</label>
                             <div class="col-sm-10">
                                 <?php
                                     $subject="SELECT * FROM subject";
@@ -172,7 +171,7 @@ require_once('inc/db.php');
                         </div>   
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Competitive Exam</label>
+                                <label class="col-sm-2 col-form-label text-danger">Kỳ thi</label>
                             <div class="col-sm-10">
                                 <?php
                                     $subject="SELECT * FROM competitive";
@@ -193,7 +192,7 @@ require_once('inc/db.php');
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Date of Birth</label>
+                                <label class="col-sm-2 col-form-label text-danger">Ngày sinh</label>
                             <div class="col-sm-10">
                                 <input type="date" class="form-control" name="date"
                                 />
@@ -201,7 +200,7 @@ require_once('inc/db.php');
                         </div>  
                         
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Student Image </label>
+                                <label class="col-sm-2 col-form-label text-danger">Ảnh học sinh</label>
                             <div class="col-sm-10">
                                 <input type="file" class="form-control-file btn btn-danger"  name="u_image" required/>
                             </div> 
@@ -210,8 +209,7 @@ require_once('inc/db.php');
                         <div class="form-group row">
                                 
                             <div class="offset-sm-2 col-sm-10">
-                                <button class="btn btn-outline-primary btn-block" name="submit" type="submit">Add
-                                Student</button> 
+                                <button class="btn btn-outline-primary btn-block" name="submit" type="submit">Thêm học sinh</button> 
                             </div> 
                         </div> 
                     </form>
@@ -229,6 +227,12 @@ require_once('inc/db.php');
 
 </body>
 </html>
+
+<script>
+    function myNewFunction(sel) {
+        return sel.options[sel.selectedIndex].text;
+    }
+</script>
 
 <?php 
     if(isset($_POST['submit'])) {
@@ -263,7 +267,7 @@ require_once('inc/db.php');
 
         if($insert_pro) {
             echo "<script>alert('Welcome , You have Added a new Student !')</script>";
-            echo "<script>window.open('gallery.php','_self')</script>";
+            echo "<script>window.open('student.php','_self')</script>";
         }
     }
 ?>

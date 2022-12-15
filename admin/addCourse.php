@@ -32,32 +32,32 @@ require_once('inc/db.php');
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center text-white bg-primary">Add Batches</h3><hr>
+                    <h3 class="text-center text-white bg-primary">Thêm khóa học</h3><hr>
                 
 
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Course Name</label>
+                                <label class="col-sm-2 col-form-label text-danger">Tên khóa học</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Course Name" name="courseName"
+                                <input type="text" class="form-control" placeholder="Nhập tên" name="courseName"
                                 />
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">For Class</label>
+                                <label class="col-sm-2 col-form-label text-danger">Lớp</label>
                             <div class="col-sm-10">
                                 <select class="form-control" name="class" required>
-                                    <option value="1">Class 1</option>
-                                    <option value="2">Class 2</option>
-                                    <option value="3">Class 3</option>
-                                    <option value="4">Class 4</option>
-                                    <option value="5">Class 5</option>
-                                    <option value="6">Class 6</option>
-                                    <option value="7">Class 7</option>
-                                    <option value="8">Class 8</option>
-                                    <option value="9">Class 9</option>
-                                    <option value="10">Class 10</option>
+                                    <option value="1">Lớp 1</option>
+                                    <option value="2">Lớp 2</option>
+                                    <option value="3">Lớp 3</option>
+                                    <option value="4">Lớp 4</option>
+                                    <option value="5">Lớp 5</option>
+                                    <option value="6">Lớp 6</option>
+                                    <option value="7">Lớp 7</option>
+                                    <option value="8">Lớp 8</option>
+                                    <option value="9">Lớp 9</option>
+                                    <option value="10">Lớp 10</option>
                                 </select>
                             </div> 
                         </div>  
@@ -69,22 +69,22 @@ require_once('inc/db.php');
          
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Batch Duration</label>
+                                <label class="col-sm-2 col-form-label text-danger">Thời gian</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Duration" name="duration" required/>
+                                <input type="text" class="form-control" placeholder="Nhập thời gian" name="duration" required/>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Batch Fee</label>
+                                <label class="col-sm-2 col-form-label text-danger">Học phí</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Fee" name="fee"
+                                <input type="text" class="form-control" placeholder="Nhập học phí" name="fee"
                                 required/>
                             </div> 
                         </div>  
 
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Batch Starts From</label>
+                                <label class="col-sm-2 col-form-label text-danger">Bắt đầu từ</label>
                             <div class="col-sm-10">
                                 <input type="date" class="form-control" name="date" required/>
                             </div> 
@@ -92,7 +92,7 @@ require_once('inc/db.php');
 
                         <div class="form-group row">    
                             <div class="offset-sm-2 col-sm-10">
-                                <button class="btn btn-outline-primary btn-block" name="submit" type="submit">Add Batch</button> 
+                                <button class="btn btn-outline-primary btn-block" name="submit" type="submit">Thêm khóa học</button> 
                             </div> 
                         </div> 
                     </form>
