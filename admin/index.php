@@ -32,12 +32,12 @@ require_once('inc/db.php');
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center text-white bg-primary">Statics Overview of Apex Academy</h3>
+                    <h3 class="text-center text-white bg-primary">Thông tin về trường học</h3>
                 </div>
 
                 <div class="col-md-3">
                     <div class="card text-primary border-primary">
-                        <div class="card-header bg-primary text-white">Students</div>
+                        <div class="card-header bg-primary text-white">Sinh viên</div>
                         <div class="card-body">
                             <table class="table table-bordered table-condensed">
                                 <tbody>
@@ -50,7 +50,7 @@ require_once('inc/db.php');
                                         
                                     ?>
                                     <tr>
-                                        <th class="bg-dark text-white">Class <?php echo   $i;?></th>
+                                        <th class="bg-dark text-white">Lớp <?php echo   $i;?></th>
                                         <th><?php echo   $row_student;?></th>
                                     </tr>
                                     <?php 
@@ -63,7 +63,7 @@ require_once('inc/db.php');
                 </div>
                 <div class="col-md-4">
                     <div class="card text-primary border-warning">
-                        <div class="card-header bg-warning text-white">Total Fee Collected</div>
+                        <div class="card-header bg-warning text-white">Tổng phí thu được</div>
                         <div class="card-body">
                             <table class="table table-bordered table-condensed">
                                 <tbody>
@@ -88,15 +88,15 @@ require_once('inc/db.php');
                                         }
                                     ?>
                                     <tr>
-                                        <th class="bg-dark text-white">Total Fee</th>
+                                        <th class="bg-dark text-white">Tổng học phi</th>
                                         <th><?php echo  $Totalfeesa;?></th>
                                     </tr>
                                     <tr>
-                                        <th class="bg-dark text-white">Collected Fee</th>
+                                        <th class="bg-dark text-white">Học phí thu được</th>
                                         <th><?php echo  $feesa;?></th>
                                     </tr>
                                     <tr>
-                                        <th class="bg-danger text-white">Remaining Fee</th>
+                                        <th class="bg-danger text-white">Học phí còn lại</th>
                                         <th><?php echo  $Totalfeesa - $feesa;?></th>
                                     </tr>
 
@@ -106,7 +106,7 @@ require_once('inc/db.php');
                     </div>
 
                     <div class="card text-primary border-warning">
-                        <div class="card-header bg-warning text-white">Balance Cash</div>
+                        <div class="card-header bg-warning text-white">Số dư tiền mặt</div>
                         <div class="card-body">
                             <table class="table table-bordered table-condensed">
                                 <tbody>
@@ -123,15 +123,15 @@ require_once('inc/db.php');
 
                                     ?>
                                     <tr>
-                                        <th class="bg-dark text-white">Collected Fee</th>
+                                        <th class="bg-dark text-white">Học phí thu được</th>
                                         <th><?php echo  $feesa;?></th>
                                     </tr>
                                     <tr>
-                                        <th class="bg-dark text-white">Expenses</th>
+                                        <th class="bg-dark text-white">Tổng chi phí phát sinh</th>
                                         <th><?php echo  $Totalexp;?></th>
                                     </tr>
                                     <tr>
-                                        <th class="bg-danger text-white">Remaining Balance</th>
+                                        <th class="bg-danger text-white">Số dư còn lại</th>
                                         <th><?php echo  $feesa-$Totalexp;?></th>
                                     </tr>
 
@@ -144,15 +144,15 @@ require_once('inc/db.php');
 
                 <div class="col-md-5">
                     <div class="card text-primary border-danger">
-                        <div class="card-header bg-danger text-white">Expenses <small>(Last 10 Expenses)</small></div>
+                        <div class="card-header bg-danger text-white">Chi phí phát sinh <small>(Hiển thị 10 chi phí gần nhất)</small></div>
                         <div class="card-body">
                             <table class="table table-bordered table-condensed">
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th>No</th>
-                                        <th>Date</th>
-                                        <th>Amount</th>
-                                        <th>Particular</th>
+                                        <th>STT</th>
+                                        <th>Ngày</th>
+                                        <th>Số tiền</th>
+                                        <th>Ghi chú</th>
                                     </tr>
                                 </thead>
                                 <tbody>

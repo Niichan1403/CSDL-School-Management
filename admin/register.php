@@ -44,17 +44,17 @@ if(isset($_GET['del'])) {
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center text-white bg-primary">View All Registration</h2>
+                    <h2 class="text-center text-white bg-primary">Hiển thị danh sách đăng ký</h2>
                     <table class="table table-border" id="table2excel">
                         <thead class="thead-dark">
                             <tr> 
-                                <th>Sr No</th> 
-                                <th>Student Name</th> 
+                                <th>STT</th> 
+                                <th>Tên</th> 
                                 <th>Email</th> 
-                                <th>Mobile</th> 
-                                <th>Address</th>
-                                <th>Class</th>
-                                <th>Date</th>
+                                <th>Điện thoại</th> 
+                                <th>Địa chỉ</th>
+                                <th>Lớp</th>
+                                <th>Ngày</th>
                             </tr> 
                         </thead>
                         <tbody>
@@ -85,7 +85,7 @@ if(isset($_GET['del'])) {
                         </tbody>
                     </table>
                 </div>
-                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Export To Excel</button>
+                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Xuất ra Excel</button>
 
             </div>
         </div>

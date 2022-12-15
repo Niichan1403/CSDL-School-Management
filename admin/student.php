@@ -44,18 +44,18 @@ if(isset($_GET['del'])) {
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center text-white bg-primary">View all Student</h2>
+                    <h2 class="text-center text-white bg-primary">Hiển thị học sinh</h2>
                     <div align = "right">
-                        <a href="addStudent.php" class="btn btn-outline-primary">Add Student </a><hr>
+                        <a href="addStudent.php" class="btn btn-outline-primary">Thêm học sinh </a><hr>
                     </div>
                     <table class="table table-border" id="table2excel">
                         <thead class="thead-dark">
                             <tr> 
-                                <th>Sr No</th> 
-                                <th>Student Name</th> 
-                                <th>Class</th> 
-                                <th>Batch</th> 
-                                <th>Image</th> 
+                                <th>STT</th> 
+                                <th>Tên</th> 
+                                <th>Lớp</th> 
+                                <th>Khóa học</th> 
+                                <th>Ảnh</th> 
                                 <th>
                                     <i class="fa fa-eye"></i>
                                 </th> 
@@ -114,7 +114,7 @@ if(isset($_GET['del'])) {
                         </tbody>
                     </table>
                 </div>
-                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Export To Excel</button>
+                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Xuất ra Excel</button>
 
             </div>
         </div>

@@ -102,7 +102,7 @@ if($_GET['id']) {
             $u_image= 'GalleryImg' .date('Y-m-d-H-i-s') . '_' . uniqid() . 'jpg';
         }
 
-        move_uploaded_file($image_tmp, "../image/gallery/$u_image");
+        move_uploaded_file($image_tmp, "../images/gallery/$u_image");
 
         $update ="UPDATE gallery set
         gallery_title = '$imageTitle',

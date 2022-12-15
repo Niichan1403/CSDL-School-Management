@@ -32,27 +32,27 @@ require_once('inc/db.php');
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center text-white bg-primary">Add Expenses</h3><hr>
+                    <h3 class="text-center text-white bg-primary">Thêm chi phí</h3><hr>
                 
 
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Particular</label>
+                                <label class="col-sm-2 col-form-label text-danger">Chi tiết</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Enter Particular Here" name="particular"
+                                <input type="text" class="form-control" placeholder="Nhập chi tiết" name="particular"
                                 />
                             </div> 
                         </div>  
                         
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Amount </label>
+                                <label class="col-sm-2 col-form-label text-danger">Số tiền </label>
                             <div class="col-sm-10">
-                                <input type="text" placeholder="Enter Amount Here" class="form-control"  name="amt" />
+                                <input type="text" placeholder="Nhâp số tiền" class="form-control"  name="amt" />
                             </div> 
                         </div> 
                         
                         <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-danger">Date </label>
+                                <label class="col-sm-2 col-form-label text-danger">Ngày </label>
                             <div class="col-sm-10">
                                 <input type="date" class="form-control"  name="date" />
                             </div> 
@@ -62,8 +62,7 @@ require_once('inc/db.php');
                         <div class="form-group row">
                                 
                             <div class="offset-sm-2 col-sm-10">
-                                <button class="btn btn-outline-primary btn-block" name="submit" type="submit">Add
-                                Expense</button> 
+                                <button class="btn btn-outline-primary btn-block" name="submit" type="submit">Thêm chi phí</button> 
                             </div> 
                         </div> 
                     </form>

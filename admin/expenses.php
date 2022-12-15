@@ -44,17 +44,17 @@ if(isset($_GET['del'])) {
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center text-white bg-primary">View All Expenses Details</h2>
+                    <h2 class="text-center text-white bg-primary">Chi tiết chi phí</h2>
                     <div align = "right">
-                        <a href="addExpenses.php" class="btn btn-outline-primary">Add Expenses </a><hr>
+                        <a href="addExpenses.php" class="btn btn-outline-primary">Thêm chi phí </a><hr>
                     </div>
                     <table class="table table-border" id="table2excel">
                         <thead class="thead-dark">
                             <tr> 
-                                <th>Sr No</th> 
-                                <th>Particular</th> 
-                                <th>Date</th> 
-                                <th>Amount</th>
+                                <th>STT</th> 
+                                <th>Chi tiết</th> 
+                                <th>Ngày</th> 
+                                <th>Số tiền</th>
                                 <th><i class="fa fa-trash-o"></i></th>
                             </tr> 
                         </thead>
@@ -77,14 +77,15 @@ if(isset($_GET['del'])) {
                                 <td><?php echo  $particular;?></td>
                                 <td><?php echo  $date;?></td>
                                 <td><?php echo  $amt;?></td>
-                                <td><a href="fee.php/del=<?php echo $id;?>" class="btn btn-danger"></a>
-                                <i class="fa fa-trash-o"></i></td>
+                                <td><a href="expenses.php?del=<?php echo $id;?>" class="btn btn-danger">
+                                <i class="fa fa-trash-o"></i></a>
+                                </td>
                             </tr>
                             <?php } ?>
                         </tbody>
                     </table>
                 </div>
-                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Export To Excel</button>
+                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Xuất ra Excel</button>
 
             </div>
         </div>

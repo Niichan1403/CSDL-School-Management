@@ -44,17 +44,17 @@ if(isset($_GET['del'])) {
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center text-white bg-primary">View All Fee Paid Details</h2>
+                    <h2 class="text-center text-white bg-primary">Chi tiết học phí</h2>
                     <table class="table table-border" id="table2excel">
                         <thead class="thead-dark">
                             <tr> 
-                                <th>Sr No</th> 
-                                <th>Student Name</th> 
-                                <th>Class</th> 
-                                <th>Batch</th> 
-                                <th>Amount</th>
-                                <th>No</th>
-                                <th>Date</th>
+                                <th>STT</th> 
+                                <th>Tên</th> 
+                                <th>Lớp</th> 
+                                <th>Khóa học</th> 
+                                <th>Số tiền</th>
+                                <th>Số hóa đơn</th>
+                                <th>Ngày</th>
                                 <th><i class="fa fa-trash-o"></i></th>
                             </tr> 
                         </thead>
@@ -84,7 +84,6 @@ if(isset($_GET['del'])) {
                                     $rowbatch = mysqli_fetch_array($runbatch);
                                     
                                     $course_name = $rowbatch['course_name'];
-                                    
                             
                             ?>
                             <tr> 
@@ -95,14 +94,15 @@ if(isset($_GET['del'])) {
                                 <td><?php echo  $fees;?></td>
                                 <td><?php echo  $rNo;?></td>
                                 <td><?php echo  $date;?></td>
-                                <td><a href="fee.php/del=<?php echo $id;?>" class="btn btn-danger"></a>
-                                <i class="fa fa-trash-o"></i></td>
+                                <td><a href="fee.php?del=<?php echo $id;?>" class="btn btn-danger">
+                                <i class="fa fa-trash-o"></i></a>
+                                </td>
                             </tr>
                             <?php } ?>
                         </tbody>
                     </table>
                 </div>
-                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Export To Excel</button>
+                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Xuất ra Excel</button>
 
             </div>
         </div>

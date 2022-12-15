@@ -11,8 +11,8 @@ include('inc/top.php');
 
     <div class="row mt-2">
         <div class="col-md-9">
-            <h3 class="bg-dark text-white text-center p-2">WELCOME TO APEX ACADEMY</h3>
-            <p class="text-justify"><b class="text-danger">Apex Academy</b> is lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            <h3 class="bg-dark text-white text-center p-2">Chào mừng đến với UET.</h3>
+            <p class="text-justify"><b class="text-danger">UET</b> is lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.
@@ -93,7 +93,7 @@ include('inc/top.php');
 
     <div class="container-fluid">
         <div class="row bg-dark mt-2 p-3">
-            <?php include('inc/footer.php'); ?>
+            <?php include('admin/inc/footer.php'); ?>
         </div>
     </div>
 </div>

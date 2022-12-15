@@ -32,7 +32,7 @@ require_once('inc/db.php');
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center text-white bg-primary">Student Details</h3>
+                    <h3 class="text-center text-white bg-primary">Chi tiết học sinh</h3>
                 </div>
                 <div class="col-md-4">
                     <?php
@@ -69,31 +69,31 @@ require_once('inc/db.php');
                     <table class="table table-bordered table-condensed">
                         <tbody>
                             <tr>
-                                <th class="bg-dark text-white">Name</th>
+                                <th class="bg-dark text-white">Tên</th>
                                 <th><?php echo $name;?></th>
                             </tr>
                             <tr>
-                                <th class="bg-dark text-white">Address</th>
+                                <th class="bg-dark text-white">Địa chỉ</th>
                                 <th><?php echo $address;?></th>
                             </tr>
                             <tr>
-                                <th class="bg-dark text-white">Class</th>
+                                <th class="bg-dark text-white">Lớp</th>
                                 <th><?php echo $class;?></th>
                             </tr>
                             <tr>
-                                <th class="bg-dark text-white">Batch</th>
+                                <th class="bg-dark text-white">Khóa học</th>
                                 <th><?php echo $batch;?></th>
                             </tr>
                             <tr>
-                                <th class="bg-dark text-white">Medium</th>
+                                <th class="bg-dark text-white">Bằng cấp</th>
                                 <th><?php echo $medium;?></th>
                             </tr>
                             <tr>
-                                <th class="bg-dark text-white">Gender</th>
+                                <th class="bg-dark text-white">Giới tính</th>
                                 <th><?php echo $gender;?></th>
                             </tr>
                             <tr>
-                                <th class="bg-dark text-white">Mobile</th>
+                                <th class="bg-dark text-white">Điện thoại</th>
                                 <th><?php echo $mobile;?></th>
                             </tr>
                             <tr>
@@ -106,31 +106,31 @@ require_once('inc/db.php');
                 <div class="col-md-4">
                     <table class="table table-bordered table-condensed">
                         <tr>
-                            <th class="bg-dark text-white">School</th>
+                            <th class="bg-dark text-white">Trường</th>
                             <th><?php echo $school;?></th>
                         </tr>
                         <tr>
-                            <th class="bg-dark text-white">Fees</th>
+                            <th class="bg-dark text-white">Học phí</th>
                             <th><?php echo $fee;?></th>
                         </tr>
                         <tr>
-                            <th class="bg-dark text-white">Password</th>
+                            <th class="bg-dark text-white">Mật khẩu</th>
                             <th><?php echo $password;?></th>
                         </tr>
                         <tr>
-                            <th class="bg-dark text-white">Subject</th>
+                            <th class="bg-dark text-white">Môn học</th>
                             <th><?php echo $subject;?></th>
                         </tr>
                         <tr>
-                            <th class="bg-dark text-white">Exam</th>
+                            <th class="bg-dark text-white">Kỳ thi</th>
                             <th><?php echo $cexam;?></th>
                         </tr>
                         <tr>
-                            <th class="bg-dark text-white">Date Of Birth</th>
+                            <th class="bg-dark text-white">Ngày sinh</th>
                             <th><?php echo $dob;?></th>
                         </tr>
                         <tr>
-                            <th class="bg-dark text-white">Registration Date</th>
+                            <th class="bg-dark text-white">Ngày đăng ký</th>
                             <th><?php echo $date;?></th>
                         </tr>
                         
@@ -163,19 +163,19 @@ require_once('inc/db.php');
             </div><hr>
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center text-white bg-primary">Fees Details</h3>
+                    <h3 class="text-center text-white bg-primary">Chi tiết học phí</h3>
                 </div>
                 <div class="col-md-0"></div>
                     <form action="" method="post">
                         <div class="form-group row">
-                            <label class="col-sm-6 col-form-label text-dark">Add Fee Amount</label>
+                            <label class="col-sm-6 col-form-label text-dark">Thêm lượng học phí</label>
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" placeholder="Enter Fee Amount" name="feepaid"/>
                             </div>
                         </div>
                         
                         <div class="form-group row">
-                            <label class="col-sm-6 col-form-label text-dark">Receipt No</label>
+                            <label class="col-sm-6 col-form-label text-dark">Số hóa đơn</label>
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" placeholder="Enter Receipt No" name="rNo"/>
                             </div>
@@ -183,7 +183,7 @@ require_once('inc/db.php');
                         
                         <div class="form-group row">
                             <div class="offset-sm-6 col-sm-6">
-                                <button class="btn btn-primary" name ="addFees">Add Fees</button>
+                                <button class="btn btn-primary" name ="addFees">Nộp học phí</button>
                             </div>
                         </div> 
                         
@@ -214,15 +214,15 @@ require_once('inc/db.php');
                         <table class="table table-bordered table-condensed">
                             <tbody>
                                 <tr>
-                                    <th class="bg-dark text-white">Total Fees</th>
+                                    <th class="bg-dark text-white">Tổng học phí</th>
                                     <th><?php echo $fee;?></th>
                                 </tr>
                                 <tr>
-                                    <th class="bg-dark text-white">Paid Fees</th>
+                                    <th class="bg-dark text-white">Học phí đã nộp</th>
                                     <th><?php echo $tFees;?></th>
                                 </tr>
                                 <tr>
-                                    <th class="bg-danger text-white">Balance</th>
+                                    <th class="bg-danger text-white">Còn lại</th>
                                     <th><?php echo $fee - $tFees;?></th>
                                 </tr>
                             </tbody>
@@ -232,14 +232,14 @@ require_once('inc/db.php');
             <hr>
             <div class="row">
                 <div class="col-md-8">
-                    <h3 class="text-center text-white bg-primary">Marks Details</h3>
+                    <h3 class="text-center text-white bg-primary">Điểm số</h3>
                     <table class="table table-bordered" id="table2excel">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Date</th>
-                                <th>Subject</th>
-                                <th>Total Marks</th>
-                                <th>Obtained Marks</th>
+                                <th>Ngày</th>
+                                <th>Môn học</th>
+                                <th>Điểm tổng</th>
+                                <th>Điểm nhận được</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -263,7 +263,7 @@ require_once('inc/db.php');
                     </table>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="text-center text-white bg-primary">Attendance Details</h3>
+                    <h3 class="text-center text-white bg-primary">Điểm danh</h3>
                     <hr>
                     <div class="row">
                         <?php 
@@ -276,13 +276,13 @@ require_once('inc/db.php');
                             $row_absent = mysqli_num_rows($run_absent);
                         ?>
                         <div class="col-md-12">
-                            <button type="button" class="btn btn-info btn-block">Present Days
+                            <button type="button" class="btn btn-info btn-block">Số ngày đi học
                                 <span class="badge badge-light"><? php echo $row_present; ?></span>
                             </button><hr>
                         </div>
                         
                         <div class="col-md-12">
-                            <button type="button" class="btn btn-danger btn-block">Absent Days
+                            <button type="button" class="btn btn-danger btn-block">Số ngày vắng học
                                 <span class="badge badge-light"><? php echo $row_absent; ?></span>
                             </button>
                         </div>
@@ -293,13 +293,13 @@ require_once('inc/db.php');
                 <div class="col-md-12">
 
                     <hr>
-                    <h3 class="text-center bg-primary text-white">Message</h3><hr>
+                    <h3 class="text-center bg-primary text-white">Tin nhắn</h3><hr>
                     <table class="table table-bordered" id="newtable2excel">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Sr No</th>
-                                <th>Date</th>
-                                <th>Messages</th>
+                                <th>STT</th>
+                                <th>Ngày</th>
+                                <th>Tin nhắn</th>
                             </tr>
                         </thead>
                         <tbody>

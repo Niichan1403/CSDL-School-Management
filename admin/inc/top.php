@@ -7,7 +7,7 @@
 
     <link href="images/mylogo.png" rel="icon" type="image/png" />
 
-    <title>Hello, world!</title>
+    <title>UET Management</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">

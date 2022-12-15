@@ -44,16 +44,16 @@ if(isset($_GET['del'])) {
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center text-white bg-primary">View all Images</h2>
+                    <h2 class="text-center text-white bg-primary">Thư viện ảnh</h2>
                     <div align = "right">
-                        <a href="addGallery.php" class="btn btn-outline-primary">Add images </a><hr>
+                        <a href="addGallery.php" class="btn btn-outline-primary">Thêm ảnh </a><hr>
                     </div>
                     <table class="table table-border" id="table2excel">
                         <thead class="thead-dark">
                             <tr> 
-                                <th>Sr No</th> 
-                                <th>Image Title</th> 
-                                <th>Image</th> 
+                                <th>STT</th> 
+                                <th>Tiêu đề</th> 
+                                <th>Ảnh</th> 
                                 <th>
                                     <i class="fa fa-pencil-square-o"></i>
                                 </th> 
@@ -74,27 +74,27 @@ if(isset($_GET['del'])) {
                                     $i++;
                                 
                             ?>
-                            <tr>
-                                <td><?php echo  $i;?></td>
-                                <td><?php echo  ucfirst($gallery_title);?></td>
-                                <td>
-                                    <img class="img-fluid" src="../images/gallery/<?php echo $gallery_image;?>" 
-                                    width ="100px;" />
-                                </td>
-                                <td>
-                                    <a class="btn btn-warning" href="editGallery.php?id=<?php echo $gallery_id;?>"><i 
-                                    class="fa fa-pencil-square-o"></i></a>
-                                </td>
-                                <td>
-                                    <a class="btn btn-danger" href="gallery.php?del=<?php echo $gallery_id;?>"><i 
-                                    class="fa fa-trash-o"></i></a>
-                                </td>
-                            </tr>
+                            <tr> 
+                            <td><?php echo  $i;?></td>
+                            <td><?php echo  ucfirst($gallery_title);?></td>
+                            <td>
+                                <img class="img-fluid" src="../images/gallery/<?php echo $gallery_image;?>" 
+                                width ="100px;" />
+                            </td>
+                            <td>
+                                <a class="btn btn-warning" href="editGallery.php?id=<?php echo $gallery_id;?>"><i 
+                                class="fa fa-pencil-square-o"></i></a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="gallery.php?del=<?php echo $gallery_id;?>"><i 
+                                class="fa fa-trash-o"></i></a>
+                            </td>
+                                </tr>
                             <?php } ?>
                         </tbody>
                     </table>
                 </div>
-                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Export To Excel</button>
+                    <button class="btn btn-danger offset-md-4" id="btn" type="button">Xuất ra Excel</button>
 
             </div>
         </div>
