@@ -536,8 +536,8 @@ ALTER TABLE `attendance`
 -- Constraints for table `fee`
 --
 ALTER TABLE `fee`
-  ADD CONSTRAINT `fee_ibfk_1` FOREIGN KEY (`studentID`) REFERENCES `student` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `fee_ibfk_2` FOREIGN KEY (`batchID`) REFERENCES `courses` (`course_id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `fee_ibfk_1` FOREIGN KEY (`studentID`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fee_ibfk_2` FOREIGN KEY (`batchID`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `msg`
