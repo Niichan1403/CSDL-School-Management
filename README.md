@@ -8,9 +8,10 @@ Dự án BTL môn CSDL được nhóm mình thiết kế và phát triển trong
 - Ma Thanh Thiện -
 
 ## Các công nghệ đã sử dụng
-- Bootstrap: framework của CSS và Js, dùng để code giao diện
-- Jquery và PHP: sử dụng để code chức năng (liên kết database, chỉnh sửa database ...)
-- Xampp: tạo server ảo và lưu trữ database
+- Bootstrap
+- Jquery
+- PHP
+- Xampp
 
 ## Database
 
